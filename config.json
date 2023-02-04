@@ -4,17 +4,17 @@
     },
     "app": {
         "apiPrefix" : "",
-        "url": "http://localhost"
+        "url": "https://71ee-103-211-54-238.in.ngrok.io"
     },
     "validations": {
         "leastNodeVersion": 10
     },
     "credentials": {
-        "apikey": "test_api_key",
-        "appId": "test_app_id",
+        "apikey": "rzrCjVBMjOAQdIjuoxXGtE8n66IKLf+KoeIdOAAL2wc=",
+        "appId": "cs-d44d1330-b586-5cb0-b909-0feff3c4b999",
         "st-67890":{
-            "apikey": "test_api_key2",
-            "appId": "test_app_id2"
+            "apikey": "rzrCjVBMjOAQdIjuoxXGtE8n66IKLf+KoeIdOAAL2wc=",
+            "appId": "st-2b0559c4-0d06-5a73-8b15-16bbd5c5f822"
         }
     },
     "redis": {
