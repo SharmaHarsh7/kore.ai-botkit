@@ -14,11 +14,11 @@ module.exports = {
     botName: botName,
 
     on_user_message: function (requestId, data, callback) {
-
-        console.log(data?.channel?.handle?.channelData?.tenant?.id);
-
+        console.log(data?.channel?.handle?.channelData?.tenant?.id ?? '')
         if ((data?.channel?.handle?.channelData?.tenant?.id ?? '') === '35378cf9-dac0-45f0-84c7-1bfb98207b59') {
+            console.log(data.agent_transfer);
             if (!data.agent_transfer) {
+                console.log('sendBotMessage');
                 return sdk.sendBotMessage(data, callback);
             } else {
                 data.message = "Agent Message";
@@ -26,17 +26,12 @@ module.exports = {
             }
         }
         else {
-            data.message = "You are not allowd to chat with us.";
-            //Sends back 'Hello' to user.
+            data.message = "Invalid user";
             return sdk.sendUserMessage(data, callback);
         }
     },
     on_bot_message: function (requestId, data, callback) {
-        if (data.message === 'hello') {
-            data.message = 'The Bot says hello!';
-        }
-        //Sends back the message to user
-
+        console.log(data.message);
         return sdk.sendUserMessage(data, callback);
     },
     on_agent_transfer: function (requestId, data, callback) {
