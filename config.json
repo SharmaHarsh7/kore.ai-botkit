@@ -4,7 +4,7 @@
     },
     "app": {
         "apiPrefix" : "",
-        "url": "https://baf0-103-211-54-226.in.ngrok.io"
+        "url": "https://8030-103-211-54-226.in.ngrok.io"
     },
     "validations": {
         "leastNodeVersion": 10
